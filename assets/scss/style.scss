@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Sansita+Swashed:wght@400;800&display=swap');
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../fonts/FredokaOne-Regular.ttf');
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.trail-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  background: linear-gradient(to left, #83a4d4, #b6fbff);
+  opacity: 90%;
+}
+
+.black-mask {
+  background-color: black;
+  opacity: 20%;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 500px;
+  height: 1000px;
+  transform: rotate(20deg);
+}
+
+.trail {
+  background-color: black;
+  position: absolute;
+  top: -20%;
+  left: 0;
+
+  width: 500px;
+  height: 1000px;
+
+  z-index: -1;
+  transform: translate3d(0, 0, 0);
+  transform: rotate(20deg);
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.trail-card {
+  &:nth-child(odd) {
+    width: 200px;
+    height: auto;
+    animation: animate-card 10s linear infinite;
+    position: relative;
+    margin-left: 6%;
+    margin-bottom: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.516), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  &:nth-child(even) {
+    width: 200px;
+    height: auto;
+    animation: animate-card 10s linear infinite;
+    position: relative;
+    margin-left: 6%;
+    transform: translateY(50px);
+    animation-direction: reverse;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.516), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.stickRight {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  font-family: 'Fredoka', cursive;
+  font-size: 30px;
+  color: black;
+  overflow-y: hidden;
+  padding-right: 5%;
+}
+
+.masthead-brand {
+  font-size: 10rem;
+}
+.mastfoot {
+  font-family: 'Rowdies', cursive;
+  font-size: large;
+  font-style: unset;
+}
+
+.spanChangeColor {
+  color: rgb(45, 151, 221);
+  font-family: 'Fredoka', cursive;
+}
+.fab {
+  color: black;
+  height: 70x;
+  width: 70px;
+  padding: 10px;
+  margin: 0 1rem;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.logo {
+  margin-right: 1rem;
+  height: 150px;
+  width: 150px;
+  border: 1px;
+  border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+  .stickRight {
+    width: 100%;
+    background: #5f2c82;
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+    background: linear-gradient(to right, #49a09d, #5f2c82);
+    opacity: 80%;
+    color: black;
+    padding-right: 0;
+  }
+  .stickRight .text {
+    opacity: 100%;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    border-color: none;
+  }
+
+  .fab {
+    color: black;
+  }
+
+  .trail-container {
+    background: black;
+  }
+
+  .masthead {
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .masthead-brand {
+    font-size: 5rem;
+  }
+
+  .cover {
+    text-align: center;
+    align-items: center;
+  }
+
+  .cover-heading {
+    text-align: center;
+  }
+
+  .tagline {
+    text-align: center;
+    padding-right: 0%;
+  }
+
+  .mastfoot {
+    padding-left: 5%;
+  }
+}
+
+@keyframes animate-card {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+.notify {
+  text-decoration: none;
+}
